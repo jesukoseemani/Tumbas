@@ -14,19 +14,22 @@ function Rightbar() {
       name: "Redmi 4X",
       time: "2 minutes ago",
       img: image2,
-      amount: 80
+      amount: 80,
+      id:1
   },
   {
     name: "Acer E1-421",
     time: "15 minutes ago",
     img: image3,
-    amount: 72
+    amount: 72,
+    id:2
 },
 {
   name: "Nikon D3500",
   time: "45 minutes ago",
   img: image1,
-  amount: 45
+  amount: 45,
+  id:3
 }
  ]
 
@@ -104,7 +107,7 @@ function Rightbar() {
                 </p>
                 </div>
                 <div className="input_range">
-                  <input type="range" name="range" id="range" min="0" max="100" value="100" />
+                  <input type="range" name="range" id="range" min="0" max="100" defaultValue="100" />
                    <div className="animate-track"></div>
                 </div>
                 
@@ -125,7 +128,7 @@ function Rightbar() {
         <div className="order-list">
         {
           orderList.map((list) => (
-            <List name={list.name} time={list.time} img={list.img} amount={list.amount} />
+            <List name={list.name} time={list.time} img={list.img} amount={list.amount} key={list.id} />
           ))
         }
         </div>

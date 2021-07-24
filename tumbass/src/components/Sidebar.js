@@ -100,7 +100,7 @@ const Sbar = styled.div`
 width: 100%;
 position: relative;
 /* height: 100vh; */
-padding: 3rem 0rem 1rem 2rem;
+padding: 3rem 0rem 3rem 2rem;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
