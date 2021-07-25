@@ -39,7 +39,7 @@ const DataT = styled.tr`
   td{
     font-size: 1.3rem;
   font-weight: 600;
-  padding: 1.5rem 0rem 2rem 1rem;
+  padding: 1rem 0rem 1rem 1rem;
   color: #262636;
   text-align: left;
 

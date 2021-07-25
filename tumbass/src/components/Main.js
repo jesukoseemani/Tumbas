@@ -104,6 +104,12 @@ function Main() {
     </select>
     </div>
     </div>
+    
+    <div className="chart_Container">
+      <Chart />
+    </div>
+    
+
   </ChartContainer>
 
   <Table />
@@ -167,11 +173,19 @@ const ChartContainer = styled.div`
 padding: 1.5rem;
 border: .2px solid #d3d1d1;
 margin-top: 2rem;
+width:100%;
+/* height: 30rem; */
+
+.chart_Container{
+  width:100%;
+  /* min-height: 15rem; */
+}
 
 .hero{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: .6rem;
 
   .hero_flow{
   display: flex;

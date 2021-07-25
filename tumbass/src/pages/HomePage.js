@@ -30,7 +30,7 @@ function HomePage() {
 
 const Home = styled.div`
 width:100%;
-max-width: 140rem;
+max-width: 128rem;
 margin: 0 auto;
 background-color: white;
 border-radius: 1rem;
