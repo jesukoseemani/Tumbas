@@ -6,8 +6,10 @@ import { faThLarge, faFileAlt, faShoppingBag, faCog, faPaperPlane, faUsers } fro
 function Sidebar() {
   return (
     <Sbar>
+      
       <div className="logo_component">
         <div className="logo"></div>
+       
         <h3>Tumbas</h3>
       </div>
 
@@ -90,9 +92,10 @@ function Sidebar() {
         <h3>
           &copy; Tumbas, 2021
         </h3>
-        <p>Platform for solution of all types of business <br/> to be more advanced.</p>
+        <p>Platform for solution of all types <br/> of business to be more advanced.</p>
       </Footer>
     </Sbar>
+  
   )
 }
 
@@ -113,6 +116,11 @@ align-items: flex-start;
   align-items: center;
   width:100%;
 
+  @media(max-width:1200px){
+    display: none;
+  }
+  
+
   .logo{
     height:4rem;
     width:4rem;
@@ -130,6 +138,9 @@ align-items: flex-start;
 .sbar_head{
   margin-top: 4rem;
   color: #2b2a2a;
+  @media(max-width:1200px){
+    margin-top: 10rem;
+  }
 }
 
 li{
@@ -159,13 +170,18 @@ const Footer = styled.div`
 margin-top: 2rem;
 position: fixed;
 bottom: 2rem;
+width:100%;
 
+@media(max-width:1200px){
+  position: static;
+  }
 h3{
   color: #2b2a2a;
   font-size: 1.37rem;
 }
 
 p{
+  width:100%;
   color: #58585c;
   margin-top: .5rem;
 }

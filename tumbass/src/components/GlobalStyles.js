@@ -25,6 +25,7 @@ html{
 body{
     background: #EBF1F6;
     font-family: 'lato', sans-serif;
+    /* overflow-x: hidden; */
 }
 
 a{

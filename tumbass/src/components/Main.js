@@ -127,6 +127,11 @@ border-left: .2px solid #d3d1d1;
 margin:3rem 0rem;
 padding: 0rem 2rem;
 
+@media(max-width: 700px){
+  max-width: 55rem;
+  /* overflow-x: hidden; */
+
+}
 `
 
 const InputSearch = styled.div`
@@ -167,6 +172,11 @@ display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-gap: 1.5rem;
 
+@media(max-width: 700px){
+  max-width: 60rem;
+  grid-template-columns: repeat(4, 17.25rem);
+ overflow-x: scroll;
+}
 `
 
 const ChartContainer = styled.div`

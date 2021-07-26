@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencilAlt, faBell, faShoppingBag, faUsers, faStarOfLife} from '@fortawesome/free-solid-svg-icons';
+import { faPencilAlt, faBell, faShoppingBag, faUsers, faStarOfLife, faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons';
 import image1 from "../images/image1.jpg"
 import image2 from "../images/image2.jpg"
 import image3 from "../images/image3.jpg"
@@ -38,10 +38,12 @@ function Rightbar() {
   return (
     <Rbar>
         <Icontop>
+           <FontAwesomeIcon className="icontop_icons_hidden" icon={faArrowAltCircleRight} size="2x" />
+
           <div className="icon_bell">
           <FontAwesomeIcon className="icontop_icons" icon={faBell} size="2x" />
           </div>
-
+         
           <div className="icon_edit">
           <FontAwesomeIcon className="icontop_icons" icon={faPencilAlt} size="2x" />
           </div>
@@ -165,6 +167,10 @@ width: 100%;
 
 .icontop_icons{
   font-size: 1.5rem;
+}
+
+.icontop_icons_hidden{
+  display: none;
 }
 `
 

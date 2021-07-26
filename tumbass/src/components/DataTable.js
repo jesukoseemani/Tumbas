@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function DataTable({photos, name, date, category, brand, price, status, sn, view}) {
   return (
     <DataT>
-      <td><img src={photos} alt="photo"></img></td>
+      <td><img src={photos} alt="data"></img></td>
       <td>
         <div className="flex">
         <p>

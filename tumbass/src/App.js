@@ -1,12 +1,25 @@
 import HomePage from "./pages/HomePage"
 import styled from "styled-components"
 import GlobalStyles from "./components/GlobalStyles";
-
+import Sidebar from "./components/Sidebar";
+import {Route, Switch} from "react-router-dom"
 function App() {
   return (
     <Main>
      <GlobalStyles />
-     <HomePage />
+
+    <Switch>
+      <Route path="/" exact>
+<HomePage />
+      </Route>
+
+      <Route path="/info" exact>
+ <Sidebar/>
+      </Route>
+     
+    </Switch>
+    
+
     </Main>
   );
 }
