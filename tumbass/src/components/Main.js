@@ -114,6 +114,7 @@ function Main() {
  
 <TableContainer>
    <Table />
+   <a href="https://docs.google.com/document/d/1CP4TReCEs4bT22k_xj9YF6anI4e1rDdg8TZ6vmJ4rZI/edit?usp=sharing" className="data_doc">GET POPULAR PRODUCTS DATA</a>
 </TableContainer>
  
 
@@ -244,6 +245,27 @@ width:100%;
 
 const TableContainer = styled.div`
 width: 100%;
+@media(max-width: 700px){
+    height: 8rem;
+    margin-top:2rem;
+    border: .2px solid #d3d1d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+.data_doc{
+  display:none;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  width:100%;
+  font-weight: bold;
+  cursor: pointer;
+
+  @media(max-width: 700px){
+    display: flex;
+  }
+}
 `
 export default Main
