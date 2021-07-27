@@ -73,10 +73,7 @@ border: .2px solid #d3d1d1;
 border-radius: .5rem;
 padding: 1rem;
 width:100%;
-@media(max-width: 700px){
-  max-width: 60rem;
- overflow-x: scroll;
-}
+
 h3{
   margin-top: 1rem;
   margin-bottom:1.5rem;

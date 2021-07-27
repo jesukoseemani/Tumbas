@@ -26,11 +26,16 @@ const pageHandler = () => {
   return (
     <>
     <Home>
+      <Flex >
       <Toggle onClick={() => setToggler(!toggler)}>
         <FontAwesomeIcon className="logo_icon" icon={faBars} size="2x" />
       </Toggle>
     
-      
+      <NewPage1 onClick={pageHandler}>
+        <FontAwesomeIcon className="logo_icon" icon={faArrowAltCircleRight} size="2x" />
+      </NewPage1>
+      </Flex>
+
       <SidebarStyle style={toggleStyle}>
           <Sidebar />
       </SidebarStyle>
@@ -107,6 +112,11 @@ flex-basis: 28%;
   
 }
 `
+
+const Flex = styled.div`
+display:flex;
+flex-direction: column;
+`
 const Toggle = styled.div`
 display: none;
 justify-content: center;
@@ -121,9 +131,8 @@ z-index: 100;
 @media (max-width: 1200px){
   display: flex;
 }
-@media(max-width: 700px){
-  margin-right: 2rem;
-  overflow-x: hidden;
+@media(max-width: 438px){
+  margin: 3rem .5rem 0rem .5rem;
 
 }
 .logo_icon{
@@ -146,6 +155,31 @@ z-index: 100;
   color: blue;  
   }
 @media(max-width: 1080px){
+  display: flex;
+}
+@media(max-width: 438px){
+  display: none;
+}
+
+`
+
+const NewPage1 = styled.div`
+display: none;
+justify-content: center;
+align-items: center;
+padding: 1.5rem;
+border: .2px solid #d3d1d1;
+border-radius: 50%;
+cursor: pointer;
+height: 3rem;
+margin: 3rem .5rem 0rem .5rem;
+z-index: 100;
+
+.logo_icon{
+  color: blue;  
+  }
+
+@media(max-width: 438px){
   display: flex;
 }
 

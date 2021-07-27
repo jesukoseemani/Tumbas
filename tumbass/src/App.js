@@ -1,7 +1,7 @@
 import HomePage from "./pages/HomePage"
 import styled from "styled-components"
 import GlobalStyles from "./components/GlobalStyles";
-import Sidebar from "./components/Sidebar";
+import Rightbar from "./components/Rightbar";
 import {Route, Switch} from "react-router-dom"
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       </Route>
 
       <Route path="/info" exact>
- <Sidebar/>
+ <Rightbar/>
       </Route>
      
     </Switch>

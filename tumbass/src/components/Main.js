@@ -111,8 +111,11 @@ function Main() {
     
 
   </ChartContainer>
-
-  <Table />
+ 
+<TableContainer>
+   <Table />
+</TableContainer>
+ 
 
   </MainStyle>
   )
@@ -127,10 +130,14 @@ border-left: .2px solid #d3d1d1;
 margin:3rem 0rem;
 padding: 0rem 2rem;
 
-@media(max-width: 700px){
-  max-width: 55rem;
-  /* overflow-x: hidden; */
+@media(max-width: 510px){
+  /* width: 55rem;
+  overflow-x: scroll; */
+  width: 30rem;
+}
 
+@media(max-width: 438px){
+  border-right: none;
 }
 `
 
@@ -173,9 +180,14 @@ grid-template-columns: repeat(4, 1fr);
 grid-gap: 1.5rem;
 
 @media(max-width: 700px){
-  max-width: 60rem;
-  grid-template-columns: repeat(4, 17.25rem);
- overflow-x: scroll;
+  grid-template-columns: repeat(2, 1fr);
+ 
+}
+
+@media(max-width: 530px){
+  
+  grid-template-columns:  1fr;
+ 
 }
 `
 
@@ -227,6 +239,11 @@ width:100%;
     }
   }
 }
+
+`
+
+const TableContainer = styled.div`
+width: 100%;
 
 `
 export default Main
