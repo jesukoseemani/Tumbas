@@ -1,5 +1,6 @@
 import React from 'react'
 import { Bar } from 'react-chartjs-2';
+import styled from "styled-components";
 
 function Chart() {
 
@@ -86,15 +87,17 @@ function Chart() {
   }
 
   return (
-    <>
+    <Barr>
        <Bar
           data={data}
           options={options}
         />
-    </>
+    </Barr>
   )
 }
 
-
+const Barr = styled.div`
+width: 70rem;
+`
 
 export default Chart

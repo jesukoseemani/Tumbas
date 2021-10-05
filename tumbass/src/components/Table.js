@@ -73,10 +73,17 @@ border: .2px solid #d3d1d1;
 border-radius: .5rem;
 padding: 1rem;
 width:100%;
-
-@media(max-width: 700px){
+max-width: 73rem;
+overflow-x: scroll;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
     display: none;
-  }
+}
+
+/* @media(max-width: 700px){
+    display: none;
+  } */
 
 h3{
   margin-top: 1rem;
@@ -85,9 +92,9 @@ h3{
 }
 
 table{
-  width: 100%;
+width:70rem;
+  /* min-width: 70rem; */
   border-collapse: collapse;
-
 }
 
 th{

@@ -9,6 +9,7 @@ import {useHistory} from "react-router-dom"
 
 function HomePage() {
  const [toggler , setToggler] = useState(false)
+ const [movebar , setMovebar] = useState(false)
  const history = useHistory()
  const toggleStyle = {
    display : toggler ? "flex" : "", 
@@ -23,15 +24,25 @@ const pageHandler = () => {
  history.push("/info")
 }
 
+const togglerHandler = () => {
+  setToggler(!toggler)
+  setMovebar(!movebar)
+
+}
+
   return (
     <>
     <Home>
-      <Flex >
-      <Toggle onClick={() => setToggler(!toggler)}>
+      <Flex style={{
+                   
+                    justifyContent: movebar ? "space-between" : "",
+                    flexDirection:movebar ? "row" : "column",                   
+                  }}>
+      <Toggle onClick={togglerHandler}>
         <FontAwesomeIcon className="logo_icon" icon={faBars} size="2x" />
       </Toggle>
     
-      <NewPage1 onClick={pageHandler}>
+      <NewPage1 style={{display : movebar ? "none" : ""}} onClick={pageHandler}>
         <FontAwesomeIcon className="logo_icon" icon={faArrowAltCircleRight} size="2x" />
       </NewPage1>
       </Flex>
@@ -77,7 +88,8 @@ flex-basis: 18%;
   display: none;
   flex-basis: 25%;
   width: 30rem;
-  position: absolute;
+  height:calc(100vh + 3rem);
+  position: fixed;
   top: -3rem;
   left: 0;
   transform: translateX(-100%);
@@ -116,6 +128,7 @@ flex-basis: 28%;
 const Flex = styled.div`
 display:flex;
 flex-direction: column;
+
 `
 const Toggle = styled.div`
 display: none;
@@ -128,6 +141,10 @@ cursor: pointer;
 height: 3rem;
 margin: 3rem 1rem 0rem 1rem;
 z-index: 100;
+/* position: fixed;
+top: 0;
+left: 0; */
+
 @media (max-width: 1200px){
   display: flex;
 }
